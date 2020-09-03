@@ -1,5 +1,8 @@
 pipeline {
     agent any
+	parameters {
+				string(description: 'Enter Version label', name: 'VersionLabel')
+	}
 	stages{
         stage('Push to S3') {
             steps {
